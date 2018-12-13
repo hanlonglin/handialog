@@ -12,7 +12,7 @@
         android:layout_gravity="right"
         android:layout_margin="5dp"
         android:padding="3dp"
-        android:src="@drawable/close" />
+        android:src="@drawable/handialog_close" />
 
     <LinearLayout
         android:layout_width="250dp"
@@ -26,7 +26,7 @@
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:src="@drawable/success" />
+            android:src="@drawable/handialog_success" />
 
         <TextView
             android:id="@+id/txt_title"

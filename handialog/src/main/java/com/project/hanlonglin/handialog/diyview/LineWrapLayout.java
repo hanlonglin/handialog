@@ -219,7 +219,7 @@ public class LineWrapLayout extends ViewGroup {
 //                }
 //                break;
 //
-//                defaultpic:
+//                handialog_defaultpic:
 //                    break;
 //            }
 //

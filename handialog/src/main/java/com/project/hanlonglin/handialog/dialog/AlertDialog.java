@@ -2,18 +2,11 @@ package com.project.hanlonglin.handialog.dialog;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
-import android.app.Dialog;
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
-import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -39,7 +32,7 @@ public class AlertDialog extends BaseDialog implements View.OnClickListener {
     AlertDialogListener listener = null;
     String title="成功";
     String message="";
-    int icon=R.drawable.success;
+    int icon=R.drawable.handialog_success;
     boolean showCancel=false;
     int animType=0;
     Context context=null;

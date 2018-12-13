@@ -35,5 +35,5 @@
         android:layout_gravity="center"
         android:layout_margin="5dp"
         android:padding="3dp"
-        android:src="@drawable/close" />
+        android:src="@drawable/handialog_close" />
 </LinearLayout>

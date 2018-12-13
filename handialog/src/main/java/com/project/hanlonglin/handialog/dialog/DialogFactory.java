@@ -1,6 +1,5 @@
 package com.project.hanlonglin.handialog.dialog;
 
-import android.app.Dialog;
 import android.content.Context;
 
 import com.project.hanlonglin.handialog.R;
@@ -97,7 +96,7 @@ public class DialogFactory {
         return new AlertDialog(context)
                 .title("失败")
                 .messsage("操作失败")
-                .icon(R.drawable.fail)
+                .icon(R.drawable.handialog_fail)
                 .animtype(AlertDialog.TYPE_FAIL)
                 .showCancel(false);
     }
@@ -106,7 +105,7 @@ public class DialogFactory {
         return new AlertDialog(context)
                 .title("失败")
                 .messsage("操作失败")
-                .icon(R.drawable.fail)
+                .icon(R.drawable.handialog_fail)
                 .animtype(AlertDialog.TYPE_FAIL)
                 .showCancel(true);
     }
@@ -115,7 +114,7 @@ public class DialogFactory {
         return new AlertDialog(context)
                 .title("警告")
                 .messsage("出现异常")
-                .icon(R.drawable.warn)
+                .icon(R.drawable.handialog_warn)
                 .animtype(AlertDialog.TYPE_WARN)
                 .showCancel(false);
     }
@@ -124,7 +123,7 @@ public class DialogFactory {
         return new AlertDialog(context)
                 .title("警告")
                 .messsage("出现异常")
-                .icon(R.drawable.warn)
+                .icon(R.drawable.handialog_warn)
                 .animtype(AlertDialog.TYPE_WARN)
                 .showCancel(true);
     }

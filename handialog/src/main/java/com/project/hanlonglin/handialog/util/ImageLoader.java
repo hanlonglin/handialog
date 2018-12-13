@@ -16,11 +16,11 @@ public class ImageLoader {
     public static void ShowImageByURl(Context context, String url, ImageView imageView)
     {
         Log.e("Picasso","url");
-        Picasso.with(context).load(url).placeholder(R.drawable.defaultpic).into(imageView);
+        Picasso.with(context).load(url).placeholder(R.drawable.handialog_defaultpic).into(imageView);
     }
     //id
     public static void ShowImageById(Context context,int id,ImageView imageView) {
         Log.e("Picasso", "id");
-        Picasso.with(context).load(id).placeholder(R.drawable.defaultpic).into(imageView);
+        Picasso.with(context).load(id).placeholder(R.drawable.handialog_defaultpic).into(imageView);
     }
 }

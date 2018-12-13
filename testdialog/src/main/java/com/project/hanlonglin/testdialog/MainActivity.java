@@ -42,17 +42,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showAdvertDialog() {
-        DialogFactory.buildAdvertDialog(this, DialogFactory.DIALOG_ADVERT)
-                .url("http://t8.baidu.com/it/u=2063170438,222422588&fm=191&app=48&wm=1,13,90,45,0,7&wmo=10,10&n=0&g=0n&f=JPEG?sec=1853310920&t=ecdf5c04372612896a6a5d483c942e29")
-                .showType(AdvertDialog.TYPE_HTTP)
-                .setConfirmListener(new ConfirmListener() {
-                    @Override
-                    public void onClick() {
-                        Log.e("TAG","click the advert");
-                    }
-                }).show();
 //        DialogFactory.buildAdvertDialog(this, DialogFactory.DIALOG_ADVERT)
-//                .show();
+//                .url("http://t8.baidu.com/it/u=2063170438,222422588&fm=191&app=48&wm=1,13,90,45,0,7&wmo=10,10&n=0&g=0n&f=JPEG?sec=1853310920&t=ecdf5c04372612896a6a5d483c942e29")
+//                .showType(AdvertDialog.TYPE_HTTP)
+//                .setConfirmListener(new ConfirmListener() {
+//                    @Override
+//                    public void onClick() {
+//                        Log.e("TAG","click the advert");
+//                    }
+//                }).show();
+        DialogFactory.buildAdvertDialog(this, DialogFactory.DIALOG_ADVERT)
+                .show();
     }
 
     private void showWarnDialog() {
