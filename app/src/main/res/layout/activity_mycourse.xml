@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorGreen"
+        android:gravity="center"
+        android:text="我的课程"
+        android:textColor="@color/colorWhite"
+        android:textSize="16dp" />
+
+    <GridView
+        android:id="@+id/gridView_course"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txt_title"
+        android:numColumns="3"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="5dp">
+    </GridView>
+</RelativeLayout>

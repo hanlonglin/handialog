@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorGreen"
+        android:gravity="center"
+        android:text="首页"
+        android:textColor="@color/colorWhite"
+        android:textSize="16dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txt_title">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.stx.xhb.xbanner.XBanner xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/myBanner"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:AutoPlayTime="3000"
+                app:isShowIndicatorOnlyOne="true"
+                app:isShowNumberIndicator="true"
+                app:pageChangeDuration="800"
+                app:pointNormal="@drawable/shape_normal"
+                app:pointSelect="@drawable/shape_select"
+                app:pointsContainerBackground="#44aaaaaa"
+                app:pointsPosition="CENTER"
+                app:tipTextSize="12sp" />
+
+
+            <com.project.hanlonglin.classsystem.veiw.diyview.AutoGridView
+                android:layout_below="@+id/myBanner"
+                android:id="@+id/gridView_actions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:horizontalSpacing="2px"
+                android:numColumns="3"
+                android:verticalSpacing="2px"></com.project.hanlonglin.classsystem.veiw.diyview.AutoGridView>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

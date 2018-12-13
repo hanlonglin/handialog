@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.hanlonglin.classsystem.MainActivity"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/li_container"
+        android:background="@color/colorWhite"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/raGroup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"></LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/raGroup"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:background="@color/colorLittleBlack">
+        <com.project.hanlonglin.classsystem.veiw.diyview.TabRadioButton
+            android:id="@+id/ra_first"
+            android:text="首页"
+            android:drawableTop="@drawable/tab_first"
+            android:checked="true"
+            style="@style/MainTab"/>
+        <com.project.hanlonglin.classsystem.veiw.diyview.TabRadioButton
+            android:id="@+id/ra_choose"
+            android:text="选课"
+            android:drawableTop="@drawable/tab_choose_class"
+            style="@style/MainTab"/>
+        <com.project.hanlonglin.classsystem.veiw.diyview.TabRadioButton
+            android:id="@+id/ra_about"
+            android:text="关于"
+            android:drawableTop="@drawable/tab_about"
+            style="@style/MainTab"/>
+    </RadioGroup>
+</android.support.constraint.ConstraintLayout>

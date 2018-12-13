@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/txt_stu"
+    android:layout_width="wrap_content"
+    android:layout_height="25dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/text_stu_bg"
+    android:gravity="center"
+    android:padding="5dp"
+    android:text="韩龙林"
+    android:textColor="@color/colorBigBrown"
+    android:textSize="11dp" />

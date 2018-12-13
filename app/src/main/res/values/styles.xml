@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">@color/colorTransparency</item>
+        <item name="android:windowBackground">@color/colorTransparency</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+
+    <!--Tab-->
+    <style name="MainTab">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@color/tab_textcolor</item>
+    </style>
+
+    <!--发布课程风格-->
+    <style name="TextStyle">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/colorLittleBlack</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+    <style name="PublishSpinnerStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColorHint">@color/colorBigBrown</item>
+        <item name="android:textColor">@color/colorLittleBlack</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <!--课程介绍风格-->
+    <style name="DetailTextStyle1">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:gravity">center|right</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/colorBigBrown</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+    <style name="DetailTextStyle2">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/colorBigBrown</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+</resources>

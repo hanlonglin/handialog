@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorLittleBrown"
+    android:orientation="vertical">
+
+       <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@color/colorGreen"
+        android:gravity="center"
+        android:text="发布课程"
+        android:textColor="@color/colorWhite"
+        android:textSize="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:src="@drawable/back"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_ok"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:src="@drawable/ok"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/image_course"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/qq"
+        app:civ_border_color="@color/colorGreen"
+        app:civ_border_width="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+    <TextView
+        android:id="@+id/txt_choose_icon"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="选择课程图标"
+        android:textColor="@color/colorGreen"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_course" />
+
+
+    <TextView
+        android:id="@+id/txt_name"
+        style="@style/TextStyle"
+        android:text="课程名:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_choose_icon" />
+
+    <Spinner
+        android:id="@+id/sp_name"
+        android:hint="请输入课程名"
+        android:entries="@array/courseArray"
+        style="@style/PublishSpinnerStyle"
+        app:layout_constraintLeft_toRightOf="@+id/txt_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_choose_icon" />
+
+    <TextView
+        android:id="@+id/txt_grade"
+        style="@style/TextStyle"
+        android:text="年级:"
+        app:layout_constraintLeft_toLeftOf="@+id/txt_name"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+    <Spinner
+        android:id="@+id/sp_grade"
+        style="@style/PublishSpinnerStyle"
+        android:hint="请输入年级"
+        android:entries="@array/gradeArray"
+        app:layout_constraintLeft_toRightOf="@+id/txt_grade"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_name" />
+
+    <TextView
+        android:id="@+id/txt_max"
+        style="@style/TextStyle"
+        android:text="人数:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_grade" />
+
+    <EditText
+        android:id="@+id/ed_max"
+        style="@style/PublishSpinnerStyle"
+        android:hint="请输入人数"
+        android:digits="0123456789"
+        android:maxLength="3"
+        android:text="20"
+        app:layout_constraintLeft_toRightOf="@+id/txt_max"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_grade" />
+
+    <TextView
+        android:id="@+id/txt_descrip"
+        style="@style/TextStyle"
+        android:text="备注:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_max" />
+
+    <EditText
+        android:id="@+id/ed_descrip"
+        style="@style/PublishSpinnerStyle"
+        android:hint="备注"
+        app:layout_constraintLeft_toRightOf="@+id/txt_descrip"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_max" />
+</android.support.constraint.ConstraintLayout>

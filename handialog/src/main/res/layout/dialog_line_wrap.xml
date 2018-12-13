@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:minHeight="400dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/colorGreen"
+            android:gravity="center"
+            android:text="学生列表"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp" />
+
+        <com.project.hanlonglin.classsystem.veiw.diyview.LineWrapLayout
+            android:id="@+id/lineWrap_views"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.project.hanlonglin.classsystem.veiw.diyview.LineWrapLayout>
+    </LinearLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_close"
+        android:layout_width="@dimen/image_close_width"
+        android:layout_height="@dimen/image_close_height"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:padding="3dp"
+        android:src="@drawable/close" />
+</LinearLayout>
