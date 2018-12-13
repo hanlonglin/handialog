@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.project.hanlonglin.handialog.R;
 import com.project.hanlonglin.handialog.dialog.listener.AlertDialogListener;
+import com.project.hanlonglin.handialog.dialog.listener.ConfirmListener;
 
 /**
  * Created by hanlonglin on 2018/12/13.
@@ -77,6 +78,11 @@ public class ConfirmDialog extends BaseDialog implements View.OnClickListener{
     }
     public ConfirmDialog message(String message){
         this.message=message;
+        return this;
+    }
+
+    public ConfirmDialog setAlertDialogListener(AlertDialogListener listener){
+        this.listener=listener;
         return this;
     }
 }
