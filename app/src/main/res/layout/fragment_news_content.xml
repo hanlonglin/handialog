@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLittleBrown">
+
+    <com.project.hanlonglin.classsystem.veiw.diyview.TitleBarRelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.project.hanlonglin.classsystem.veiw.diyview.TitleBarRelativeLayout>
+    <EditText
+        android:id="@+id/ed_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorLittleBlack"
+        android:textColorHint="@color/colorBigBrown"
+        android:hint="这是新闻板块"
+        android:gravity="top|left"
+        android:padding="5dp"/>
+</LinearLayout>

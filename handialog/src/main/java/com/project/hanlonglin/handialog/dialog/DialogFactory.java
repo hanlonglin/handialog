@@ -19,8 +19,11 @@ public class DialogFactory {
 
     public final static int DIALOG_CONFIRM = 6;
 
-    public final static int DIALOG_ADVERT=7;
+    public final static int DIALOG_ADVERT = 7;
 
+    public final static int DIALOG_LIST = 8;
+
+    public final static int DIALOG_HELP = 9;
 
     public static AlertDialog buildAlertDialog(Context context, int type) {
         AlertDialog dialog = null;
@@ -48,24 +51,66 @@ public class DialogFactory {
         return dialog;
     }
 
-    public static ConfirmDialog buildConfirmDialog(Context context,int type){
-        ConfirmDialog dialog=null;
-        switch (type){
+    public static ConfirmDialog buildConfirmDialog(Context context, int type) {
+        ConfirmDialog dialog = null;
+        switch (type) {
             case DIALOG_CONFIRM:
-                dialog=createConfirmDialog(context);
+                dialog = createConfirmDialog(context);
                 break;
         }
         return dialog;
     }
+    public static ConfirmDialog buildConfirmDialog(Context context) {
+        return buildConfirmDialog(context,DIALOG_CONFIRM);
+    }
 
-    public static AdvertDialog buildAdvertDialog(Context context,int type){
-        AdvertDialog dialog=null;
-        switch (type){
+
+    public static AdvertDialog buildAdvertDialog(Context context, int type) {
+        AdvertDialog dialog = null;
+        switch (type) {
             case DIALOG_ADVERT:
-                dialog=createAdvertDialog(context);
+                dialog = createAdvertDialog(context);
                 break;
         }
         return dialog;
+    }
+    public static AdvertDialog buildAdvertDialog(Context context) {
+        return buildAdvertDialog(context,DIALOG_ADVERT);
+    }
+
+    public static ListDialog buildListDialog(Context context, int type) {
+        ListDialog dialog = null;
+        switch (type) {
+            case DIALOG_LIST:
+                dialog = createListDialog(context);
+                break;
+        }
+        return dialog;
+    }
+    public static ListDialog buildListDialog(Context context) {
+        return buildListDialog(context,DIALOG_LIST);
+    }
+
+    public static HelpDialog buildHelpDialog(Context context, int type) {
+        HelpDialog dialog = null;
+        switch (type) {
+            case DIALOG_HELP:
+                dialog = createHelpDialog(context);
+                break;
+        }
+        return dialog;
+    }
+    public static HelpDialog buildHelpDialog(Context context){
+        return buildHelpDialog(context,DIALOG_HELP);
+    }
+
+    private static HelpDialog createHelpDialog(Context context) {
+        return new HelpDialog(context)
+                .message("请问有什么需要帮助的吗？");
+    }
+
+    private static ListDialog createListDialog(Context context) {
+        return new ListDialog(context).title("列表");
     }
 
     private static AdvertDialog createAdvertDialog(Context context) {

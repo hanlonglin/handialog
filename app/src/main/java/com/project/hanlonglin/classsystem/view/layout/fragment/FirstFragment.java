@@ -16,7 +16,10 @@ import com.project.hanlonglin.classsystem.util.ImageUtil;
 import com.project.hanlonglin.classsystem.util.adapter.TAdapter;
 import com.project.hanlonglin.classsystem.util.item.ActionItem;
 import com.project.hanlonglin.classsystem.view.layout.activity.MyCoursesAc;
+import com.project.hanlonglin.classsystem.view.layout.activity.NewsAc;
 import com.project.hanlonglin.classsystem.view.layout.activity.PublishCourseAc;
+import com.project.hanlonglin.classsystem.view.layout.activity.QQChatAc;
+import com.project.hanlonglin.classsystem.view.layout.activity.TaobaoAc;
 import com.stx.xhb.xbanner.XBanner;
 
 
@@ -61,9 +64,9 @@ public class FirstFragment extends BaseFragment {
         list.add(new ActionItem("考试安排",R.drawable.qq));
         list.add(new ActionItem("学生管理",R.drawable.qq));
         list.add(new ActionItem("近期活动",R.drawable.qq));
-        list.add(new ActionItem("通知",R.drawable.qq));
-        list.add(new ActionItem("艺术校园",R.drawable.qq));
-        list.add(new ActionItem("个人空间",R.drawable.qq));
+        list.add(new ActionItem("新闻板块",R.drawable.qq));
+        list.add(new ActionItem("qq对话",R.drawable.qq));
+        list.add(new ActionItem("淘宝链接",R.drawable.qq));
         TAdapter<ActionItem> adapter=new TAdapter<ActionItem>(list,R.layout.item_action) {
             @Override
             public void bindView(ViewHolder holder, ActionItem obj) {
@@ -83,6 +86,18 @@ public class FirstFragment extends BaseFragment {
                 }
                 if(TextUtils.equals(item.getTitle(),"课程列表")){
                     startActivity(new Intent(getActivity(), MyCoursesAc.class));
+                    getActivity().overridePendingTransition(R.anim.bottom_to_top,0);
+                }
+                if(TextUtils.equals(item.getTitle(),"淘宝链接")){
+                    startActivity(new Intent(getActivity(), TaobaoAc.class));
+                    getActivity().overridePendingTransition(R.anim.bottom_to_top,0);
+                }
+                if(TextUtils.equals(item.getTitle(),"qq对话")){
+                    startActivity(new Intent(getActivity(), QQChatAc.class));
+                    getActivity().overridePendingTransition(R.anim.bottom_to_top,0);
+                }
+                if(TextUtils.equals(item.getTitle(),"新闻板块")){
+                    startActivity(new Intent(getActivity(), NewsAc.class));
                     getActivity().overridePendingTransition(R.anim.bottom_to_top,0);
                 }
             }

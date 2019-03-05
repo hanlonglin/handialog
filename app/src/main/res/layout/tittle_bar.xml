@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorLittleBlue">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorLittleBlue"
+        android:gravity="center"
+        android:text="登陆"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp" />
+    <ImageView
+        android:id="@+id/image_back"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:background="@color/colorLittleBlue"
+        android:padding="8dp"
+        android:src="@drawable/back"/>
+</RelativeLayout>

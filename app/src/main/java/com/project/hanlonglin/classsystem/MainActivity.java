@@ -1,11 +1,16 @@
 package com.project.hanlonglin.classsystem;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.graphics.Color;
+import android.os.Build;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -24,6 +29,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT >= 21) {
+            View decorView = getWindow().getDecorView();
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
         setContentView(R.layout.activity_main);
 
         fgManager=getFragmentManager();
@@ -38,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
                 FragmentTransaction fgTrasaction=fgManager.beginTransaction();
                 hideAll(fgTrasaction);
+                selectAnim(findViewById(i));
                 switch (i) {
                     case R.id.ra_first:
                         if(fg_first==null){
@@ -65,6 +77,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         ragroup.check(R.id.ra_about);
+    }
+
+    private void selectAnim(View v){
+        ObjectAnimator scaleX=ObjectAnimator.ofFloat(v,"scaleX",1f,0.8f,1f);
+        ObjectAnimator scaleY=ObjectAnimator.ofFloat(v,"scaleY",1f,0.8f,1f);
+        AnimatorSet set=new AnimatorSet();
+        set.setDuration(200);
+        set.play(scaleX).with(scaleY);
+        set.start();
     }
 
     private void hideAll(FragmentTransaction fgTrasaction) {

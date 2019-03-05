@@ -1,6 +1,7 @@
 package com.project.hanlonglin.classsystem;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 import com.project.hanlonglin.classsystem.app.AppApplication;
 import com.project.hanlonglin.classsystem.database.dao.StudentDao;
 import com.project.hanlonglin.classsystem.database.model.Student;
+import com.project.hanlonglin.classsystem.veiw.diyview.TitleBarRelativeLayout;
 import com.project.hanlonglin.classsystem.view.layout.dialog.AlertDialog;
 import com.project.hanlonglin.classsystem.view.layout.dialog.AlertDialogListener;
 
@@ -29,7 +31,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     EditText ed_id, ed_passwd;
     Button btn_login;
     TextView txt_register, txt_forget_passwd;
-    ImageView image_qq,image_back;
+    ImageView image_qq;
+    TitleBarRelativeLayout title_layout;
 
     StudentDao stuDao;
     @Override
@@ -39,6 +42,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         intiView();
         //gotoMain();
         stuDao=new StudentDao(this);
+
     }
 
     private void intiView() {
@@ -48,13 +52,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         txt_forget_passwd = (TextView) findViewById(R.id.txt_forget_passwd);
         txt_register = (TextView) findViewById(R.id.txt_register);
         image_qq = (ImageView) findViewById(R.id.image_qq);
-        image_back=(ImageView)findViewById(R.id.image_back);
+        title_layout=(TitleBarRelativeLayout)findViewById(R.id.titleLayout);
+        title_layout.setTitle("登录");
 
         btn_login.setOnClickListener(this);
         txt_register.setOnClickListener(this);
         txt_forget_passwd.setOnClickListener(this);
         image_qq.setOnClickListener(this);
-        image_back.setOnClickListener(this);
     }
 
     @Override
@@ -71,9 +75,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.image_qq:
                 loginByQQ();
-                break;
-            case R.id.image_back:
-                finish();
                 break;
         }
     }

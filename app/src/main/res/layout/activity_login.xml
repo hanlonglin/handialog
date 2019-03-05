@@ -1,32 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorLittleBrown"
     android:orientation="vertical"
     android:fitsSystemWindows="true">
     <!--头部-->
-    <TextView
-        android:id="@+id/txt_title"
+    <com.project.hanlonglin.classsystem.veiw.diyview.TitleBarRelativeLayout
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@color/colorLittleBlue"
-        android:gravity="center"
-        android:text="登陆"
-        android:textColor="@color/colorWhite"
-        android:textSize="18dp"
+        android:layout_height="40dp"
+        android:id="@+id/titleLayout"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <ImageView
-        android:id="@+id/image_back"
-        android:layout_width="40dp"
-        android:layout_height="50dp"
-        android:background="@color/colorLittleBlue"
-        android:padding="8dp"
-        android:src="@drawable/back"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"></com.project.hanlonglin.classsystem.veiw.diyview.TitleBarRelativeLayout>
 
     <TextView
         android:id="@+id/txt_id"
@@ -38,7 +26,7 @@
         android:textColor="@color/colorBlack"
         android:gravity="center"
         android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/image_back"/>
+        app:layout_constraintTop_toBottomOf="@+id/titleLayout" />
     <TextView
         android:id="@+id/txt_passwd"
         android:layout_width="80dp"
@@ -49,19 +37,19 @@
         android:textColor="@color/colorBlack"
         android:gravity="center"
         android:layout_marginTop="1dp"
-        app:layout_constraintTop_toBottomOf="@+id/txt_id"/>
+        app:layout_constraintTop_toBottomOf="@+id/txt_id" />
     <EditText
         android:id="@+id/ed_id"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:background="@color/colorWhite"
-        android:layout_marginTop="10dp"
         android:hint="请输入账号"
         android:textColorHint="@color/colorLittleBrown"
         android:textColor="@color/colorBlack"
+        android:layout_marginTop="10dp"
         app:layout_constraintLeft_toRightOf="@+id/txt_id"
-        app:layout_constraintTop_toBottomOf="@+id/txt_title"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleLayout"/>
     <EditText
         android:id="@+id/ed_passwd"
         android:layout_width="0dp"
@@ -78,7 +66,7 @@
     <Button
         android:id="@+id/btn_login"
         android:layout_width="0dp"
-        android:layout_height="35dp"
+        android:layout_height="48dp"
         android:text="登陆"
         android:textSize="16dp"
         android:textColor="@color/colorWhite"
@@ -88,7 +76,9 @@
         android:background="@drawable/login_btn"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ed_passwd"/>
+        app:layout_constraintTop_toBottomOf="@+id/ed_passwd"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp" />
     <TextView
         android:id="@+id/txt_register"
         android:layout_width="0dp"
@@ -101,7 +91,8 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/btn_login"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="10dp" />
     <TextView
         android:id="@+id/txt_forget_passwd"
         android:layout_width="0dp"
@@ -114,7 +105,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         app:layout_constraintTop_toBottomOf="@+id/btn_login"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="10dp" />
 
     <!--底部-->
     <ImageView
