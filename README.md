@@ -22,20 +22,26 @@ Step 2. Add the dependency
   
   	DialogFactory.buildAlertDialog(this, DialogFactory.DIALOG_SUCCESS).show();
   
+  ![success](https://github.com/hanlonglin/handialog/blob/master/shotcuts/success.png)
   
   //失败对话框
   
   	DialogFactory.buildAlertDialog(this, DialogFactory.DIALOG_FAIL).show();
+	
+![success](https://github.com/hanlonglin/handialog/blob/master/shotcuts/fail.png)
   
   //警告
   
   	DialogFactory.buildAlertDialog(this, DialogFactory.DIALOG_WARNING_CANCEL).show();
+
+  ![success](https://github.com/hanlonglin/handialog/blob/master/shotcuts/warn.png)
   
   //确定
   
   	DialogFactory.buildConfirmDialog(this, DialogFactory.DIALOG_CONFIRM)
                 .message("")
                 .title("").show();
+  ![success](https://github.com/hanlonglin/handialog/blob/master/shotcuts/ocnfirm.png)
                 
   //按钮监听
   
@@ -70,3 +76,5 @@ Step 2. Add the dependency
                         Log.e("TAG","click the advert");
                     }
                 }).show();
+
+  ![success](https://github.com/hanlonglin/handialog/blob/master/shotcuts/advert.png)
